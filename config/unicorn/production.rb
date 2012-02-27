@@ -7,11 +7,11 @@
 # a more verbose configuration using more features.
 
 # Listen on a Unix data socket
-listen "/tmp/oing.socket", :backlog => 2048
+listen "/tmp/facebook-posts-search.socket", :backlog => 2048
 
 worker_processes 2 # this should be >= nr_cpus
 
-shared_path = "/home/muik/deploy/oing/shared"
+shared_path = "/home/muik/deploy/facebook-posts-search/shared"
 pid "#{shared_path}/pids/unicorn.pid"
 stderr_path "#{shared_path}/log/unicorn.log"
 stdout_path "#{shared_path}/log/unicorn.log"
