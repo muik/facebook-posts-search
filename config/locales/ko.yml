@@ -1,0 +1,12 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ko:
+  app_name: "페이스북 글 검색"
+  search: "검색"
+  no_results: "검색 결과 없습니다."
+  error_title: "에러"
+  unfold: "더보기"
+  fold: "줄여보기"
+  next: "지난 글 더보기"
+  loading: "로딩중..."

@@ -1,0 +1,97 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  font-size: 17px;
+}
+
+form {
+  margin: 5px 0;
+}
+
+.loading {
+  font-size: 15px;
+  text-align: center;
+  padding: 20px;
+}
+
+ul.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .from_pic {
+    float: left;
+    margin-left: -60px;
+  }
+
+  .from_name {
+    font-weight: bold;
+  }
+
+  .message {
+    color: #333;
+    word-break: break-word;
+    margin: 5px 0 10px 0;
+  }
+
+  .media {
+    overflow: hidden;
+    .picture {
+      float: left;
+      display: block;
+      margin-right: 10px;
+    }
+    .text {
+      font-size: 13px;
+    }
+    .name, .caption, .description {
+      display: block;
+    }
+    .name {
+      font-weight: bold;
+    }
+    .caption {
+      color: #999;
+    }
+    .description {
+      color: #555;
+    }
+  }
+
+  .timeago {
+    color: #777;
+    font-size: 11px;
+  }
+}
+
+.paging {
+  margin: 10px 0;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 5px;
+  }
+  ul.posts {
+    .from_pic img {
+      width: 30px;
+      height: 30px;
+    }
+    li {
+      padding-left: 35px;
+    }
+  
+    .from_pic {
+      margin-left: -35px;
+    }
+  }
+}

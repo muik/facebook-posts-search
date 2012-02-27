@@ -1,0 +1,72 @@
+<h1><%= t(:app_name) %></h1>
+<form class="form-search search">
+  <input type="text" name="q" value="" class="search-query" placeholder="search" />
+  <button type="submit" class="btn"><%= t(:search) %></button>
+</form>
+
+<div class="results"></div>
+
+<script type="text/template" id="template_posts">
+  {{#data}}
+    <li>
+    {{#from}}
+      <a class="from_pic" target="_blank" href="http://www.facebook.com/profile.php?id={{id}}"><img src="http://graph.facebook.com/{{id}}/picture?type=square" /></a>
+      <a class="from_name" target="_blank" href="http://www.facebook.com/profile.php?id={{id}}">{{name}}</a>
+    {{/from}}
+    <div class="message">{{{message}}}</div>
+    {{#picture}}
+    <div class="media">
+      <a target="_blank" href="{{link}}" class="picture"><img src="{{picture}}" /></a>
+      <div class="text">
+        <a target="_blank" href="{{link}}" class="name">{{name}}</a>
+        <span class="caption">{{caption}}</span>
+        <p class="description">{{description}}</p>
+      </div>
+    </div>
+    {{/picture}}
+    <abbr class="timeago" title="{{updated_time}}">{{updated_time}}</abbr>
+    </li>
+  {{/data}}
+</script>
+
+<script type="text/template" id="template_loading">
+  <div class="loading"><%= t :loading %></div>
+</script>
+
+<script type="text/template" id="template_others">
+  {{#paging}}
+  <div class="paging">
+    <a href="{{next}}" class="btn" data-loading-text="<%= t :loading %>"><%= t :next %></a>
+  </div>
+  {{/paging}}
+  {{#error}}
+    <div class="alert alert-block alert-error fade in">
+      <h4 class="alert-heading"><%= t :error_title %></h4>
+      <p>{{message}}</p>
+    </div>
+  {{/error}}
+</script>
+
+<script type="text/template" id="template_results">
+  {{#data}}
+  <ul class="posts">
+    {{{data}}}
+  </ul>
+  {{/data}}
+  {{^error}}
+    {{^data}}
+    <div class="alert fade in">
+      <%= :no_results %>
+    </div>
+    {{/data}}
+  {{/error}}
+  <div class="others">
+    {{{others}}}
+  </div>
+</script>
+
+<script type="text/template" id="template_post_message">
+  <span class="beginning">{{{beginning}}}</span>
+  <div class="collapse in remaining" id="remaining_{{id}}">{{{remaining}}}</div>
+  <button class="btn more" data-toggle="collapse" data-target="#remaining_{{id}}" data-unfold-txt="<%= t :unfold %>" data-fold-txt="<%= t :fold %>"><%= t :unfold %></button>
+</script>

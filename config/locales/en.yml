@@ -1,0 +1,13 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  app_name: "Facebook Public Posts Search"
+  search: "Search"
+  no_results: "No results"
+  more: "More"
+  error_title: "Oh snap! You got an error!"
+  unfold: "More"
+  fold: "Fold"
+  next: "More past posts"
+  loading: "Loading..."
