@@ -12,4 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.timeago
+//= require jquery.timeago.i18n
+//= require jquery.autolink
+//= require bootstrap-button
+//= require bootstrap-collapse
+//= require hogan-1.0.5
 //= require_tree .
