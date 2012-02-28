@@ -86,7 +86,7 @@ on_loaded = (response) ->
   $('.message').autolink({target: '_blank'})
 
 window.fbAsyncInit = () ->
-  search 'water'
+  return
 
 f = (d) ->
    js = null
