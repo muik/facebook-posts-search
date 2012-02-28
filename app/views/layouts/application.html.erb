@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html manifest="search.appcache">
 <head>
   <meta charset="utf-8">
   <title>FacebookPostsSearch</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", media: "all", digest: false %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -15,7 +15,7 @@
 </div>
 
 <div id="fb-root"></div>
-<%= javascript_include_tag "application" %>
+<%= javascript_include_tag "application", digest: false %>
 <%= yield :body_bottom %>
 </body>
 </html>

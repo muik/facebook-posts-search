@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# 2012-02-28-v1
+
+CACHE:
+assets/application.css
+assets/application.js
+
+NETWORK:
+*
