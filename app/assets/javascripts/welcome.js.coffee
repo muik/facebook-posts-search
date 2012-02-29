@@ -44,12 +44,15 @@ on_loaded_next_page = (response) ->
     response['data'].map (item) ->
       fold_message(item)
       return item
-  html = template_posts.render(response)
-  html = $(html)
-  $("abbr.timeago", html).timeago()
-  $(".collapse", html).collapse('hide')
-  $('.message', html).autolink({target: '_blank'})
-  $('ul.posts').append(html)
+
+    if response['data'].length > 0
+      html = template_posts.render(response)
+      html = $(html)
+      $("abbr.timeago", html).timeago()
+      $(".collapse", html).collapse('hide')
+      $('.message', html).autolink({target: '_blank'})
+      $('ul.posts').append(html)
+
   html = template_others.render(response)
   $('.results .others').html(html)
 
